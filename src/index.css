@@ -148,7 +148,7 @@
   }
 
   body {
-    @apply bg-background text-foreground min-w-[300px] min-h-dvh;
+    @apply bg-background text-foreground min-w-[300px] min-h-dvh max-w-[100vw];
   }
 
   p {

@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router"
 import ContentHeader from "./components/layout/ContentHeader"
 import SidebarLocal from "./components/layout/sidebar-local/Sidebar"
-import TabsLocal from "./components/layout/Tabs"
+import TabsLocal from "./components/layout/system-tabs/Tabs"
 import { SidebarProvider } from "./components/ui/sidebar"
 import ParaLlevar from "./pages/pedidos/para-llevar/ParaLlevar"
 import Pedidos from "./pages/pedidos/mostrador/Pedidos"
@@ -33,19 +33,35 @@ function App() {
                 <Route path="para-llevar" element={<ParaLlevar />} />
               </Route>
               <Route path="ventas">
-                <Route path="" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar ventas</div>} />
+                <Route path="" element={<Navigate to={"/ventas/ventas"} replace={true} />} />
+                <Route path="ventas" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar ventas</div>} />
+                <Route path="caja-movimientos" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar caja-movimientos</div>} />
+                <Route path="caja-arqueo" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar caja-arqueo</div>} />
               </Route>
               <Route path="gastos">
-                <Route path="" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar gastos</div>} />
+                <Route path="" element={<Navigate to={"/gastos/gastos"} replace={true} />} />
+                <Route path="gastos" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar gastos</div>} />
+                <Route path="categorias" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar categorias</div>} />
               </Route>
               <Route path="productos">
-                <Route path="" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar productos</div>} />
+                <Route path="" element={<Navigate to={"/productos/productos"} replace={true} />} />
+                <Route path="productos" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar productos</div>} />
+                <Route path="ingredientes" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar ingredientes</div>} />
+                <Route path="categorias" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar categorias</div>} />
+                <Route path="ingredientes-categorias" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar ingredientes-categorias</div>} />
+                <Route path="stock" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar stock</div>} />
+                <Route path="stock-movimientos" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar stock-movimientos</div>} />
+                <Route path="precios" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar precios</div>} />
               </Route>
               <Route path="clientes">
-                <Route path="" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar clientes</div>} />
+                <Route path="" element={<Navigate to={"/clientes/clientes"} replace={true} />} />
+                <Route path="clientes" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar clientes</div>} />
+                <Route path="por-cobrar" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar por-cobrar</div>} />
               </Route>
               <Route path="proveedores">
-                <Route path="" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar proveedores</div>} />
+                <Route path="" element={<Navigate to={"/proveedores/proveedores"} replace={true} />} />
+                <Route path="proveedores" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar proveedores</div>} />
+                <Route path="por-pagar" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar por-pagar</div>} />
               </Route>
               <Route path="reportes">
                 <Route path="" element={<div className="flex items-center justify-center min-h-screen">Sin desarrollar reportes</div>} />
